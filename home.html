@@ -1,0 +1,61 @@
+<div class="container">
+    <div class='container'>
+			<div class="input-group col-xs-3 pad">
+		  <span class="input-group-addon" id="basic-addon1">Image</span>
+		  <input type="text" class="form-control" placeholder="Image" aria-describedby="basic-addon1" ng-model="beer.image">
+		</div>
+		<div class="input-group col-xs-3 pad">
+		  <span class="input-group-addon" id="basic-addon1">Name</span>
+		  <input type="text" class="form-control" placeholder="Name of beer" aria-describedby="basic-addon1" ng-model='beer.name'>
+		</div>
+		<div class="input-group col-xs-3 pad">
+		  <span class="input-group-addon" id="basic-addon1">Style</span>
+		  <input type="text" class="form-control" placeholder="Style/Type" aria-describedby="basic-addon1" ng-model='beer.style'>
+		</div>
+		<div class="input-group col-xs-3 pad">
+		  <span class="input-group-addon" id="basic-addon1">Alc/Vol</span>
+		  <input type="text" class="form-control" placeholder="% of Alc" aria-describedby="basic-addon1" ng-model='beer.alcVol'>
+		</div>
+		<button class='btn btn-info pad' ng-click='addBeer()'>add</button>
+	</div>	
+<hr>
+		
+		
+		<!-- Creating a Search -->
+		<div class='searchBar'>Search <input type="text" ng-model='searchVar'></div>
+<!-- 
+		<button ng-click='order="name" '> Name </button>
+		<button ng-click='order="style" '> Style </button>
+		<button ng-click='order="alcVol" '> Alc/Vol </button>
+		<button ng-click='order="" '> Reset </button> -->
+
+
+
+		<div class='beerProd' ng-repeat='myVar in myList | filter:searchVar'>
+		<img src="{{myVar.image}}" class="beer-images">
+		<br>
+		{{myVar.name}}
+		<br>
+		{{myVar.style}}
+		<br>
+		{{myVar.alcVol}}
+		<br>
+		<button type='button' ng-click='myList.$remove(myVar)'>Remove</button>
+		<!-- <input type='text' ng-model='myVar.name'>
+		<input type='text' ng-model='myVar.age'>
+		<button ng-click='myList.$save(myVar)'>save</button> -->
+		<button ng-click='checked=!checked'>like</button>
+		<div>
+		  <div class="check-element animate-show" ng-show="checked">
+		    <span class="glyphicon glyphicon-thumbs-up"></span> 
+		  </div>
+		</div>
+		<div>
+		 
+		  <div class="check-element animate-show" ng-hide="checked">
+		    <span class="glyphicon glyphicon-thumbs-down"></span> 
+		  </div>
+		</div>
+
+		</div>
+    </div>
