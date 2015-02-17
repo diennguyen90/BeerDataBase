@@ -50,6 +50,10 @@ color:green;
   color:red;
 }
 
-.pad{
-    padding:10px;
+.primary{
+    background-color:beige;
+}
+
+footer{
+    background-color:#BBBBBB;
 }

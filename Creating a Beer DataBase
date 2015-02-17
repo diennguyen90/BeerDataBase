@@ -1,0 +1,17 @@
+Creating a Beer DataBase
+
+1.Create an app/Controller
+
+2.Link to Firebase
+
+3.Create inputs for image/name/style/AlcVol
+
+4.Create a add button along with an addBeer function
+
+5.Have a REMOVE function
+
+6.Create a FILTER for SEARCH
+
+7.Use ng show/hide for the LIKE button
+
+8.
